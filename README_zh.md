@@ -99,12 +99,6 @@ AutoCdPath to "C:\Users\username\Documents\Scripts".
 
 ### 3.直接在项目中包含所需要的代码
 
-## 联系
-
-作者：ruiyangzhou01
-
-邮箱：[ruiyangzhou01@gmail.com](mailto:ruiyangzhou01@gmail.com)
-
 ## 开源许可证
 
 [GPL-3.0 License](https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/LICENSE) © ruiyangzhou01
