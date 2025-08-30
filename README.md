@@ -3,12 +3,12 @@
 	<h1 align="center">MATLAB Utilities</h1>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/v/release/fentaniao/MATLAB-Utilities?&color=blue&logo=hack-the-box"/>
+	<img src="https://img.shields.io/github/v/release/ruiyangzhou01/MATLAB-Utilities?&color=blue&logo=hack-the-box"/>
 	<img alt="MATLAB" src="https://img.shields.io/badge/-MATLAB-00ADD8?style=flat&logo=matrix&logoColor=white"/>
 </p>
 <p align="center">
-	<a href="https://github.com/Fentaniao/MATLAB-Utilities/blob/main/README.md">English Readme</a>  | 
-	<a href="https://github.com/Fentaniao/MATLAB-Utilities/blob/main/README_zh.md">中文自述文件</a>
+	<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README.md">English Readme</a>  | 
+	<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_zh.md">中文自述文件</a>
 </p>
 
 A set of utilities to power MATLAB developing progress.
@@ -57,7 +57,7 @@ last than MATLAB R2013b.
 
 #### Download scripts via GitHub
 
-[GitHub releases page](https://github.com/Fentaniao/MATLAB-Utilities/releases), click on `Assets` at the bottom to show the files available in the release and then click on the .m scripts or .zip file you want to download.
+[GitHub releases page](https://github.com/ruiyangzhou01/MATLAB-Utilities/releases), click on `Assets` at the bottom to show the files available in the release and then click on the .m scripts or .zip file you want to download.
 
 #### Don't forget to Add to MATLAB search path
 
@@ -99,12 +99,6 @@ AutoCdPath to "C:\Users\username\Documents\Scripts".
 
 ### 3.Include the required code directly in your project
 
-## Contact
-
-Author: Fentaniao
-
-Email: [fentaniao@gmail.com](mailto:fentaniao@gmail.com)
-
 ## License
 
-[GPL-3.0 License](https://github.com/Fentaniao/MATLAB-Utilities/blob/main/LICENSE) © Fentaniao
+[GPL-3.0 License](https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/LICENSE) © ruiyangzhou01
