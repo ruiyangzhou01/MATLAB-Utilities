@@ -3,12 +3,12 @@
 	<h1 align="center">MATLAB Utilities</h1>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/v/release/fentaniao/MATLAB-Utilities?&color=blue&logo=hack-the-box"/>
+	<img src="https://img.shields.io/github/v/release/ruiyangzhou01/MATLAB-Utilities?&color=blue&logo=hack-the-box"/>
 	<img alt="MATLAB" src="https://img.shields.io/badge/-MATLAB-00ADD8?style=flat&logo=matrix&logoColor=white"/>
 </p>
 <p align="center">
-	<a href="https://github.com/Fentaniao/MATLAB-Utilities/blob/main/README.md">English Readme</a>  | 
-	<a href="https://github.com/Fentaniao/MATLAB-Utilities/blob/main/README_zh.md">中文自述文件</a>
+	<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README.md">English Readme</a>  | 
+	<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_zh.md">中文自述文件</a>
 </p>
 
 这是一组MATLAB实用程序，旨在优化MATLAB开发流程。
@@ -57,7 +57,7 @@ MATLAB 版本不低于R2013b.
 
 #### 通过GitHub下载脚本
 
-导航到[GitHub releases page](https://github.com/Fentaniao/MATLAB-Utilities/releases)，点击底部的**Assets**来显示发布版本中可用的文件，然后点击你想要下载的.m 脚本或.zip压缩包。
+导航到[GitHub releases page](https://github.com/ruiyangzhou01/MATLAB-Utilities/releases)，点击底部的**Assets**来显示发布版本中可用的文件，然后点击你想要下载的.m 脚本或.zip压缩包。
 
 #### 别忘记将脚本所在文件夹添加到MATLAB搜索路径
 
@@ -101,10 +101,10 @@ AutoCdPath to "C:\Users\username\Documents\Scripts".
 
 ## 联系
 
-作者：Fentaniao
+作者：ruiyangzhou01
 
-邮箱：[fentaniao@gmail.com](mailto:fentaniao@gmail.com)
+邮箱：[ruiyangzhou01@gmail.com](mailto:ruiyangzhou01@gmail.com)
 
 ## 开源许可证
 
-[GPL-3.0 License](https://github.com/Fentaniao/MATLAB-Utilities/blob/main/LICENSE) © Fentaniao
+[GPL-3.0 License](https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/LICENSE) © ruiyangzhou01
