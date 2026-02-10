@@ -1,103 +1,102 @@
 <p align="center">
-	<img width="480px" alt="logo" src="media/logo.png" align="center" />
-	<h1 align="center">MATLAB Utilities</h1>
+<img width="480px" alt="logo" src="media/logo.png" align="center" />
+<h1 align="center">MATLAB Utilities</h1>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/v/release/ruiyangzhou01/MATLAB-Utilities?&color=blue&logo=hack-the-box"/>
-	<img alt="MATLAB" src="https://img.shields.io/badge/-MATLAB-00ADD8?style=flat&logo=matrix&logoColor=white"/>
+<img src="https://img.shields.io/github/v/release/ruiyangzhou01/MATLAB-Utilities?&color=blue&logo=hack-the-box"/>
+<img alt="MATLAB" src="https://img.shields.io/badge/-MATLAB-00ADD8?style=flat&logo=matrix&logoColor=white"/>
 </p>
 <p align="center">
-	<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README.md">English Readme</a>  | 
-	<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_zh.md">中文自述文件</a>
+<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README.md">English</a>  |
+<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_zh.md">简体中文</a>  |
+<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_de.md">Deutsch</a>  |
+<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_es.md">Español</a>  |
+<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_fr.md">Français</a>
 </p>
 
-A set of utilities to power MATLAB developing progress.
+MATLAB Utilities is a collection of helper scripts that streamline common development tasks and editor workflows.
 
-## Current utilities
+## Included utilities
 
 ### `AutoCdPath`
 
-- Filename: `AutoCdPath.m`
-
-- Function: Automatically set current path to the opened file's path
-
+- File: `AutoCdPath.m`
+- Purpose: Automatically change the current directory to the folder of the active file.
 - Command: `AutoCdPath`
 
 ### `OneMlx2M`
 
-- Filename: `OneMlx2M.m`
-
-- Function: Transfer current .mlx file to .m file
-
+- File: `OneMlx2M.m`
+- Purpose: Convert the current `.mlx` live script to a `.m` file.
 - Command: `OneMlx2M`
 
 ### `MultiMlx2M`
 
-- Filename: `MultiMlx2M.m`
-
-- Function: Transfer all .mlx file in current path to .m file
-
+- File: `MultiMlx2M.m`
+- Purpose: Convert all `.mlx` files in the current folder to `.m` files.
 - Command: `MultiMlx2M`
 
 ### `MBeautifier`
 
-- Folder name: `MBeautifier`
-
-- Function: A MATLAB source code formatter, beautifier. It can be used directly in the MATLAB Editor and it is configurable.
-
+- Folder: `MBeautifier`
+- Purpose: A MATLAB source code formatter/beautifier that integrates with the MATLAB Editor and is configurable.
 - Command: `MBeautify.formatCurrentEditorPage()`
+- Note: Based on the [MBeautifier](https://github.com/davidvarga/MBeautifier) project.
 
-- Remark: base on [MBeautifier](https://github.com/davidvarga/MBeautifier)。
+## Installation
 
-## Install
+### Requirements
 
-### Requirement
+MATLAB R2013b or later.
 
-last than MATLAB R2013b.
+### Download from GitHub
 
-#### Download scripts via GitHub
+1. Go to the [GitHub releases page](https://github.com/ruiyangzhou01/MATLAB-Utilities/releases).
+2. Under **Assets**, download the `.m` scripts or the `.zip` archive you want.
 
-[GitHub releases page](https://github.com/ruiyangzhou01/MATLAB-Utilities/releases), click on `Assets` at the bottom to show the files available in the release and then click on the .m scripts or .zip file you want to download.
+### Add to the MATLAB search path
 
-#### Don't forget to Add to MATLAB search path
+Add the folder that contains the scripts to your MATLAB search path.
 
 ## Usage
 
-Here provides more than one way to use these utilities.
+There are several ways to use these utilities.
 
-### 1.Via command window
+### 1. Command Window
 
-Enter command directly in command window.
+Enter commands directly in the Command Window.
 
-For example, you can transfer the current path to the opened file's path by enter the command in command window:
+For example, to change to the directory of the active file, run:
 
 ```matlab
 AutoCdPath
 ```
 
-then you can find such the result in command window:
+You will see a message similar to:
 
 ```matlab
 AutoCdPath to "C:\Users\username\Documents\Scripts".
 ```
 
-### 2.Set to favorites command, point-and-use
+### 2. Add to Favorites for point-and-click use
 
-#### Add to favorites command
+#### Add to Favorites
 
-<img src="media/image-20210921110048305.png" alt="image-20210921110048305" style="zoom: 50%;" />
+<img src="media/image-20210921110048305.png" alt="Add to favorites" style="zoom: 50%;" />
 
-#### Edit favorites command
+#### Edit Favorites
 
-<img src="media/image-20210921110103753.png" alt="image-20210921110103753" style="zoom:50%;" />
+<img src="media/image-20210921110103753.png" alt="Edit favorites" style="zoom: 50%;" />
 
-<img src="media/image-20210921110115227.png" alt="image-20210921110115227" style="zoom:50%;" />
+<img src="media/image-20210921110115227.png" alt="Edit favorites command" style="zoom: 50%;" />
 
-#### Effect picture
+#### Result
 
-<img src="media/image-20210921110140550.png" alt="image-20210921110140550"  /> 
+<img src="media/image-20210921110140550.png" alt="Favorites result" />
 
-### 3.Include the required code directly in your project
+### 3. Include the utilities in your project
+
+Copy the required scripts into your project or call them from your own scripts.
 
 ## License
 
