@@ -25,7 +25,7 @@ MATLAB Utilities sammelt editorbezogene MATLAB-Skripte und den MBeautifier-Code-
 - **OneMlx2M** (`MWidgets/OneMlx2M.m`): Konvertiert das aktuell geöffnete `.mlx` Live Script in eine `.m`-Datei.
 - **MultiMlx2M** (`MWidgets/MultiMlx2M.m`): Konvertiert alle `.mlx`-Dateien im aktuellen Ordner in `.m`-Dateien (ruft zuvor `AutoCdPath` auf).
 - **Beautifier** (`MWidgets/Beautifier.m`): Formatiert die aktive `.m`-Datei, indem `MBeautify.formatCurrentEditorPage()` aufgerufen wird.
-- **LiveScriptCustomize** (`MWidgets/LiveScriptCustomize.m`): Setzt Live-Editor-Schriften (Code: JetBrains Mono, normal: Segoe UI, Größe 14px).
+- **LiveScriptCustomize** (`MWidgets/LiveScriptCustomize.m`): Setzt Live-Editor-Schriften (Code: Jetbrains Mono, normal: Segoe UI, Größe 14px).
 - **Setup** (`MWidgets/Setup.m`): Fügt MATLAB-Favoriten (Kategorie `WIDGETS`) für AutoCdPath, OneMlx2M, MultiMlx2M und Beautifier hinzu und verwendet Symbole aus `icons/`.
 
 ### MBeautifier-Formatter
@@ -34,7 +34,8 @@ MATLAB Utilities sammelt editorbezogene MATLAB-Skripte und den MBeautifier-Code-
 - **Formatierbefehle**:
   - `MBeautify.formatCurrentEditorPage()` (mit `true` speichern)
   - `MBeautify.formatEditorSelection()` (mit `true` speichern)
-  - `MBeautify.formatFile(file, outFile)`
+  - `MBeautify.formatFile(file)` (formatiert und lässt die Datei geöffnet, ohne zu speichern)
+  - `MBeautify.formatFile(file, outFile)` (formatiert und schreibt in die Ausgabedatei)
   - `MBeautify.formatFiles(directory, fileFilter)`
 - **Konfiguration**: Bearbeiten Sie `MBeautifier/resources/settings/MBeautyConfigurationRules.xml` und führen Sie `MBeautify.setup()` erneut aus.
 - Basiert auf dem Projekt [MBeautifier](https://github.com/davidvarga/MBeautifier).
@@ -69,7 +70,7 @@ MBeautify.formatCurrentEditorPage()
 
 ### Favoriten und Shortcuts
 
-- Führen Sie `Setup` im Ordner `MWidgets` aus, um Favoriten mit Symbolen zur Werkzeugleiste hinzuzufügen.
+- Öffnen Sie `MWidgets/Setup.m` im MATLAB-Editor, stellen Sie sicher, dass sie aktiv ist, und führen Sie `Setup` aus, um Favoriten mit Symbolen zur Werkzeugleiste hinzuzufügen.
 - MBeautifier kann außerdem Shortcuts für Formatieraktionen erstellen:
 
 ```matlab

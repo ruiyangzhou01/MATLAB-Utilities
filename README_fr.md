@@ -25,7 +25,7 @@ MATLAB Utilities rassemble des scripts MATLAB orientés éditeur et le formateur
 - **OneMlx2M** (`MWidgets/OneMlx2M.m`) : Convertit le Live Script `.mlx` actif en fichier `.m`.
 - **MultiMlx2M** (`MWidgets/MultiMlx2M.m`) : Convertit tous les `.mlx` du dossier courant en `.m` (appelle d'abord `AutoCdPath`).
 - **Beautifier** (`MWidgets/Beautifier.m`) : Formate le fichier `.m` actif via `MBeautify.formatCurrentEditorPage()`.
-- **LiveScriptCustomize** (`MWidgets/LiveScriptCustomize.m`) : Configure les polices du Live Editor (code : JetBrains Mono, normal : Segoe UI, taille 14px).
+- **LiveScriptCustomize** (`MWidgets/LiveScriptCustomize.m`) : Configure les polices du Live Editor (code : Jetbrains Mono, normal : Segoe UI, taille 14px).
 - **Setup** (`MWidgets/Setup.m`) : Ajoute des Favoris MATLAB (catégorie `WIDGETS`) pour AutoCdPath, OneMlx2M, MultiMlx2M et Beautifier en utilisant les icônes de `icons/`.
 
 ### Formateur MBeautifier
@@ -34,7 +34,8 @@ MATLAB Utilities rassemble des scripts MATLAB orientés éditeur et le formateur
 - **Commandes de formatage** :
   - `MBeautify.formatCurrentEditorPage()` (utilisez `true` pour enregistrer)
   - `MBeautify.formatEditorSelection()` (utilisez `true` pour enregistrer)
-  - `MBeautify.formatFile(file, outFile)`
+  - `MBeautify.formatFile(file)` (formate et laisse le fichier ouvert sans l'enregistrer)
+  - `MBeautify.formatFile(file, outFile)` (formate et écrit dans le fichier de sortie)
   - `MBeautify.formatFiles(directory, fileFilter)`
 - **Configuration** : Modifiez `MBeautifier/resources/settings/MBeautyConfigurationRules.xml`, puis relancez `MBeautify.setup()`.
 - Basé sur le projet [MBeautifier](https://github.com/davidvarga/MBeautifier).
@@ -69,7 +70,7 @@ MBeautify.formatCurrentEditorPage()
 
 ### Favoris et raccourcis
 
-- Exécutez `Setup` dans le dossier `MWidgets` pour ajouter des favoris avec des icônes à la barre d'outils.
+- Ouvrez `MWidgets/Setup.m` dans l’éditeur MATLAB, assurez-vous qu’il est actif, puis exécutez `Setup` pour ajouter des favoris avec des icônes à la barre d'outils.
 - MBeautifier peut aussi créer des raccourcis pour les actions de formatage :
 
 ```matlab

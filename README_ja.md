@@ -25,7 +25,7 @@ MATLAB Utilities は、エディタ向けの MATLAB スクリプトと MBeautifi
 - **OneMlx2M**（`MWidgets/OneMlx2M.m`）：アクティブな `.mlx` Live Script を `.m` ファイルに変換します。
 - **MultiMlx2M**（`MWidgets/MultiMlx2M.m`）：現在のフォルダ内の `.mlx` をすべて `.m` に変換します（先に `AutoCdPath` を呼び出します）。
 - **Beautifier**（`MWidgets/Beautifier.m`）：`MBeautify.formatCurrentEditorPage()` を呼び出してアクティブな `.m` ファイルを整形します。
-- **LiveScriptCustomize**（`MWidgets/LiveScriptCustomize.m`）：Live Editor のフォント設定（コード：JetBrains Mono、通常：Segoe UI、サイズ 14px）を適用します。
+- **LiveScriptCustomize**（`MWidgets/LiveScriptCustomize.m`）：Live Editor のフォント設定（コード：Jetbrains Mono、通常：Segoe UI、サイズ 14px）を適用します。
 - **Setup**（`MWidgets/Setup.m`）：`icons/` のアイコンを使って AutoCdPath、OneMlx2M、MultiMlx2M、Beautifier の MATLAB お気に入り（カテゴリ `WIDGETS`）を追加します。
 
 ### MBeautifier フォーマッタ
@@ -34,7 +34,8 @@ MATLAB Utilities は、エディタ向けの MATLAB スクリプトと MBeautifi
 - **整形コマンド**：
   - `MBeautify.formatCurrentEditorPage()`（保存する場合は `true`）
   - `MBeautify.formatEditorSelection()`（保存する場合は `true`）
-  - `MBeautify.formatFile(file, outFile)`
+  - `MBeautify.formatFile(file)`（整形して保存せずに開いたままにします）
+  - `MBeautify.formatFile(file, outFile)`（整形して出力ファイルに書き込みます）
   - `MBeautify.formatFiles(directory, fileFilter)`
 - **設定**：`MBeautifier/resources/settings/MBeautyConfigurationRules.xml` を編集し、`MBeautify.setup()` を再実行します。
 - [MBeautifier](https://github.com/davidvarga/MBeautifier) プロジェクトに基づいています。
@@ -69,7 +70,7 @@ MBeautify.formatCurrentEditorPage()
 
 ### お気に入りとショートカット
 
-- `MWidgets` フォルダで `Setup` を実行すると、アイコン付きのお気に入りがツールバーに追加されます。
+- MATLAB エディタで `MWidgets/Setup.m` を開き、アクティブな状態で `Setup` を実行すると、アイコン付きのお気に入りがツールバーに追加されます。
 - MBeautifier では整形アクションのショートカットも作成できます。
 
 ```matlab

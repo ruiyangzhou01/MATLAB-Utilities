@@ -25,7 +25,7 @@ MATLAB Utilities collects editor-focused MATLAB scripts and the MBeautifier code
 - **OneMlx2M** (`MWidgets/OneMlx2M.m`): Converts the active `.mlx` Live Script to a `.m` file.
 - **MultiMlx2M** (`MWidgets/MultiMlx2M.m`): Converts every `.mlx` file in the current folder to `.m` files (calls `AutoCdPath` first).
 - **Beautifier** (`MWidgets/Beautifier.m`): Formats the active `.m` file by calling `MBeautify.formatCurrentEditorPage()`.
-- **LiveScriptCustomize** (`MWidgets/LiveScriptCustomize.m`): Sets Live Editor fonts (code: JetBrains Mono, normal: Segoe UI, size 14px).
+- **LiveScriptCustomize** (`MWidgets/LiveScriptCustomize.m`): Sets Live Editor fonts (code: Jetbrains Mono, normal: Segoe UI, size 14px).
 - **Setup** (`MWidgets/Setup.m`): Adds MATLAB Favorites (category `WIDGETS`) for AutoCdPath, OneMlx2M, MultiMlx2M, and Beautifier using icons from `icons/`.
 
 ### MBeautifier formatter
@@ -34,7 +34,8 @@ MATLAB Utilities collects editor-focused MATLAB scripts and the MBeautifier code
 - **Formatting commands**:
   - `MBeautify.formatCurrentEditorPage()` (use `true` to save)
   - `MBeautify.formatEditorSelection()` (use `true` to save)
-  - `MBeautify.formatFile(file, outFile)`
+  - `MBeautify.formatFile(file)` (format and leave open, unsaved)
+  - `MBeautify.formatFile(file, outFile)` (format and write to the output file)
   - `MBeautify.formatFiles(directory, fileFilter)`
 - **Configuration**: Edit `MBeautifier/resources/settings/MBeautyConfigurationRules.xml`, then rerun `MBeautify.setup()`.
 - Based on the [MBeautifier](https://github.com/davidvarga/MBeautifier) project.
@@ -69,7 +70,7 @@ MBeautify.formatCurrentEditorPage()
 
 ### Favorites and shortcuts
 
-- Run `Setup` from the `MWidgets` folder to add toolbar favorites with icons.
+- Open `MWidgets/Setup.m` in the MATLAB Editor, ensure it is the active editor file, and run `Setup` to add toolbar favorites with icons.
 - MBeautifier can also create shortcuts for formatting actions:
 
 ```matlab

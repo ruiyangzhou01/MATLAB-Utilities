@@ -25,7 +25,7 @@ MATLAB Utilities reúne scripts orientados al editor de MATLAB y el formateador 
 - **OneMlx2M** (`MWidgets/OneMlx2M.m`): Convierte el Live Script `.mlx` activo en un archivo `.m`.
 - **MultiMlx2M** (`MWidgets/MultiMlx2M.m`): Convierte todos los `.mlx` de la carpeta actual a archivos `.m` (llama primero a `AutoCdPath`).
 - **Beautifier** (`MWidgets/Beautifier.m`): Formatea el archivo `.m` activo llamando a `MBeautify.formatCurrentEditorPage()`.
-- **LiveScriptCustomize** (`MWidgets/LiveScriptCustomize.m`): Configura las fuentes del Live Editor (código: JetBrains Mono, normal: Segoe UI, tamaño 14px).
+- **LiveScriptCustomize** (`MWidgets/LiveScriptCustomize.m`): Configura las fuentes del Live Editor (código: Jetbrains Mono, normal: Segoe UI, tamaño 14px).
 - **Setup** (`MWidgets/Setup.m`): Agrega Favoritos de MATLAB (categoría `WIDGETS`) para AutoCdPath, OneMlx2M, MultiMlx2M y Beautifier usando los iconos de `icons/`.
 
 ### Formateador MBeautifier
@@ -34,7 +34,8 @@ MATLAB Utilities reúne scripts orientados al editor de MATLAB y el formateador 
 - **Comandos de formato**:
   - `MBeautify.formatCurrentEditorPage()` (use `true` para guardar)
   - `MBeautify.formatEditorSelection()` (use `true` para guardar)
-  - `MBeautify.formatFile(file, outFile)`
+  - `MBeautify.formatFile(file)` (formatea y deja el archivo abierto sin guardar)
+  - `MBeautify.formatFile(file, outFile)` (formatea y escribe en el archivo de salida)
   - `MBeautify.formatFiles(directory, fileFilter)`
 - **Configuración**: Edite `MBeautifier/resources/settings/MBeautyConfigurationRules.xml` y vuelva a ejecutar `MBeautify.setup()`.
 - Basado en el proyecto [MBeautifier](https://github.com/davidvarga/MBeautifier).
@@ -69,7 +70,7 @@ MBeautify.formatCurrentEditorPage()
 
 ### Favoritos y accesos directos
 
-- Ejecute `Setup` desde la carpeta `MWidgets` para añadir favoritos con iconos a la barra de herramientas.
+- Abra `MWidgets/Setup.m` en el Editor de MATLAB, asegúrese de que esté activo y ejecute `Setup` para añadir favoritos con iconos a la barra de herramientas.
 - MBeautifier también puede crear accesos directos para acciones de formato:
 
 ```matlab

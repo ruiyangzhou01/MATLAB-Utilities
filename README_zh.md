@@ -25,7 +25,7 @@ MATLAB Utilities 汇集了面向编辑器的 MATLAB 脚本和 MBeautifier 代码
 - **OneMlx2M**（`MWidgets/OneMlx2M.m`）：将当前打开的 `.mlx` Live Script 转换为 `.m` 文件。
 - **MultiMlx2M**（`MWidgets/MultiMlx2M.m`）：将当前文件夹中的所有 `.mlx` 文件转换为 `.m` 文件（会先调用 `AutoCdPath`）。
 - **Beautifier**（`MWidgets/Beautifier.m`）：通过 `MBeautify.formatCurrentEditorPage()` 格式化当前 `.m` 文件。
-- **LiveScriptCustomize**（`MWidgets/LiveScriptCustomize.m`）：设置 Live Editor 字体（代码：JetBrains Mono，普通：Segoe UI，大小 14px）。
+- **LiveScriptCustomize**（`MWidgets/LiveScriptCustomize.m`）：设置 Live Editor 字体（代码：Jetbrains Mono，普通：Segoe UI，大小 14px）。
 - **Setup**（`MWidgets/Setup.m`）：使用 `icons/` 中的图标，为 AutoCdPath、OneMlx2M、MultiMlx2M、Beautifier 添加 MATLAB 收藏夹（分类 `WIDGETS`）。
 
 ### MBeautifier 格式化器
@@ -34,7 +34,8 @@ MATLAB Utilities 汇集了面向编辑器的 MATLAB 脚本和 MBeautifier 代码
 - **格式化命令**：
   - `MBeautify.formatCurrentEditorPage()`（传入 `true` 可保存）
   - `MBeautify.formatEditorSelection()`（传入 `true` 可保存）
-  - `MBeautify.formatFile(file, outFile)`
+  - `MBeautify.formatFile(file)`（格式化并保持打开但不保存）
+  - `MBeautify.formatFile(file, outFile)`（格式化并写入输出文件）
   - `MBeautify.formatFiles(directory, fileFilter)`
 - **配置**：编辑 `MBeautifier/resources/settings/MBeautyConfigurationRules.xml`，然后重新运行 `MBeautify.setup()`。
 - 基于 [MBeautifier](https://github.com/davidvarga/MBeautifier) 项目。
@@ -69,7 +70,7 @@ MBeautify.formatCurrentEditorPage()
 
 ### 收藏夹与快捷方式
 
-- 在 `MWidgets` 文件夹中运行 `Setup`，可添加带图标的工具栏收藏夹。
+- 在 MATLAB 编辑器中打开并激活 `MWidgets/Setup.m`，然后运行 `Setup`，可添加带图标的工具栏收藏夹。
 - MBeautifier 也可以创建格式化快捷方式：
 
 ```matlab
