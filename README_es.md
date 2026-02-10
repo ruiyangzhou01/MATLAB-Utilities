@@ -11,43 +11,40 @@
 <a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_zh.md">简体中文</a>  |
 <a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_de.md">Deutsch</a>  |
 <a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_es.md">Español</a>  |
-<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_fr.md">Français</a>
+<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_fr.md">Français</a>  |
+<a href="https://github.com/ruiyangzhou01/MATLAB-Utilities/blob/main/README_ja.md">日本語</a>
 </p>
 
-MATLAB Utilities es un conjunto de scripts de ayuda que agilizan tareas comunes de desarrollo y flujos de trabajo del editor en MATLAB.
+MATLAB Utilities reúne scripts orientados al editor de MATLAB y el formateador de código MBeautifier para agilizar los flujos de trabajo diarios.
 
-## Utilidades incluidas
+## Contenido
 
-### `AutoCdPath`
+### Scripts de MWidgets
 
-- Archivo: `AutoCdPath.m`
-- Propósito: Cambia automáticamente el directorio actual a la carpeta del archivo activo.
-- Comando: `AutoCdPath`
+- **AutoCdPath** (`MWidgets/AutoCdPath.m`): Cambia la carpeta actual al directorio del archivo activo en el editor. Muestra un error si no hay un archivo abierto.
+- **OneMlx2M** (`MWidgets/OneMlx2M.m`): Convierte el Live Script `.mlx` activo en un archivo `.m`.
+- **MultiMlx2M** (`MWidgets/MultiMlx2M.m`): Convierte todos los `.mlx` de la carpeta actual a archivos `.m` (llama primero a `AutoCdPath`).
+- **Beautifier** (`MWidgets/Beautifier.m`): Formatea el archivo `.m` activo llamando a `MBeautify.formatCurrentEditorPage()`.
+- **LiveScriptCustomize** (`MWidgets/LiveScriptCustomize.m`): Configura las fuentes del Live Editor (código: JetBrains Mono, normal: Segoe UI, tamaño 14px).
+- **Setup** (`MWidgets/Setup.m`): Agrega Favoritos de MATLAB (categoría `WIDGETS`) para AutoCdPath, OneMlx2M, MultiMlx2M y Beautifier usando los iconos de `icons/`.
 
-### `OneMlx2M`
+### Formateador MBeautifier
 
-- Archivo: `OneMlx2M.m`
-- Propósito: Convierte el Live Script `.mlx` actual en un archivo `.m`.
-- Comando: `OneMlx2M`
-
-### `MultiMlx2M`
-
-- Archivo: `MultiMlx2M.m`
-- Propósito: Convierte todos los archivos `.mlx` de la carpeta actual en archivos `.m`.
-- Comando: `MultiMlx2M`
-
-### `MBeautifier`
-
-- Carpeta: `MBeautifier`
-- Propósito: Un formateador/embellecedor de código fuente de MATLAB, integrado en el editor y configurable.
-- Comando: `MBeautify.formatCurrentEditorPage()`
-- Nota: Basado en el proyecto [MBeautifier](https://github.com/davidvarga/MBeautifier).
+- **Configuración inicial**: Ejecute `MBeautify.setup()` una vez para generar `MBeautifier/resources/settings/MBeautyConfigurationRules.m` desde las reglas XML.
+- **Comandos de formato**:
+  - `MBeautify.formatCurrentEditorPage()` (use `true` para guardar)
+  - `MBeautify.formatEditorSelection()` (use `true` para guardar)
+  - `MBeautify.formatFile(file, outFile)`
+  - `MBeautify.formatFiles(directory, fileFilter)`
+- **Configuración**: Edite `MBeautifier/resources/settings/MBeautyConfigurationRules.xml` y vuelva a ejecutar `MBeautify.setup()`.
+- Basado en el proyecto [MBeautifier](https://github.com/davidvarga/MBeautifier).
 
 ## Instalación
 
 ### Requisitos
 
-MATLAB R2013b o posterior.
+- APIs del Desktop Editor de MATLAB (`matlab.desktop.editor`).
+- APIs del Live Editor de MATLAB (`matlab.internal.liveeditor`) para la conversión `.mlx`.
 
 ### Descarga desde GitHub
 
@@ -56,47 +53,44 @@ MATLAB R2013b o posterior.
 
 ### Añadir a la ruta de búsqueda de MATLAB
 
-Añada la carpeta que contiene los scripts a la ruta de búsqueda de MATLAB.
+Añada la raíz del repositorio (o las carpetas `MWidgets` y `MBeautifier`) a la ruta de búsqueda de MATLAB.
 
 ## Uso
 
-Hay varias formas de usar estas utilidades.
-
-### 1. Ventana de comandos
-
-Ingrese los comandos directamente en la ventana de comandos.
-
-Por ejemplo, para cambiar al directorio del archivo activo, ejecute:
+### Ventana de comandos
 
 ```matlab
 AutoCdPath
+OneMlx2M
+MultiMlx2M
+Beautifier
+MBeautify.formatCurrentEditorPage()
 ```
 
-Verá un mensaje similar a:
+### Favoritos y accesos directos
+
+- Ejecute `Setup` desde la carpeta `MWidgets` para añadir favoritos con iconos a la barra de herramientas.
+- MBeautifier también puede crear accesos directos para acciones de formato:
 
 ```matlab
-AutoCdPath to "C:\Users\username\Documents\Scripts".
+MBeautify.createShortcut('editorpage')
+MBeautify.createShortcut('editorselection')
+MBeautify.createShortcut('file')
 ```
 
-### 2. Agregar a Favoritos para uso con un clic
-
-#### Agregar a Favoritos
+#### Favoritos manuales (opcional)
 
 <img src="media/image-20210921110048305.png" alt="Agregar a Favoritos" style="zoom: 50%;" />
-
-#### Editar Favoritos
 
 <img src="media/image-20210921110103753.png" alt="Editar Favoritos" style="zoom: 50%;" />
 
 <img src="media/image-20210921110115227.png" alt="Editar comando de favoritos" style="zoom: 50%;" />
 
-#### Resultado
-
 <img src="media/image-20210921110140550.png" alt="Resultado de favoritos" />
 
-### 3. Incluir las utilidades en su proyecto
+### Fuentes del Live Editor
 
-Copie los scripts necesarios en su proyecto o llámelos desde sus propios scripts.
+Ejecute `LiveScriptCustomize` para aplicar la configuración de fuentes predeterminada del script.
 
 ## Licencia
 
